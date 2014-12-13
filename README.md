@@ -8,11 +8,26 @@ Information about the first challenge can be found [here](https://github.com/lat
 Problem definition
 ==================
 Create a images processing service that
-- Performs image search on Flickr based on the following criteria ADADAXDADA
+- Performs image search via [Flickr API](https://www.flickr.com/services/api/flickr.photos.search.html) with the following criteria ADADAXDADA
 - Adds [LatCraft logo](https://github.com/latcraft/latcraft.github.io/blob/master/images/logo.png) to the top-right image corner
 - Resizes images to 300x300
 - Concatenates 10 images by forming bigger 3000x3000 image
 - Stores concatenated images to your S3 instance and responds with the links
+
+Expected input: 
+
+        http://<ip address>/search?query=Linux+Ubuntu+MacOs
+
+Expected JSON response:
+
+```
+[
+   "http://<s3 ip address>>/<<image name>>.<<extension>>", 
+   "http://<s3 ip address>>/<<image name>>.<<extension>>",
+   ... 7 more entries here
+   "http://<s3 ip address>>/<<image name>>.<<extension>>"
+]
+```
 
 # Requirements
 
