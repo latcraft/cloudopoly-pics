@@ -9,25 +9,26 @@ Information about the first challenge can be found [here](https://github.com/lat
 
 Problem definition
 ==================
-Create a images processing service that
-- Performs image search via [Flickr API](https://www.flickr.com/services/api/flickr.photos.search.html) with the following criteria ADADAXDADA
-- Adds [LatCraft logo](https://github.com/latcraft/latcraft.github.io/blob/master/images/logo.png) to the top-right image corner
-- Resizes images to 300x300
-- Concatenates 10 images by forming bigger 3000x3000 image
-- Stores concatenated images to your S3 instance and responds with the links
+Create an image generate service which:
+- Accepts a set of bit.ly ids pointing to 10 images in JPG format with 2048 x 1365 resolution
+- Resolves URIs (`1uCqioJ` resolves to `http://bit.ly/1uCqioJ`) and uploads images to your S3 instance and adds [LatCraft logo](logo.png) to the top-right corner of every image (feel free to convert logo to more convenient format if neccessary)
+- Concatenates 10 images (in whatever order) by forming large 20480 x 13650 image
+- Uploads concatenated image to your S3 instance
+- Respones with links to all 11 images
 
 Expected input: 
 
-        http://<ip address>/search?query=Linux+Ubuntu+MacOs
+        http://<ip address>/process?images=1uCqioJ+1sqlimo+1uADAkJ+1BHryP2+13koVon+1uCqTGX+16jnrfk+1wsy1sC+1wN7idN+1uADWb8
 
 Expected JSON response:
 
 ```
 [
-   "http://<s3 ip address>>/<<image name>>.<<extension>>", 
-   "http://<s3 ip address>>/<<image name>>.<<extension>>",
-   ... 7 more entries here
-   "http://<s3 ip address>>/<<image name>>.<<extension>>"
+   "http://<s3 ip address>>/<<image name>>.jpg", 
+   "http://<s3 ip address>>/<<image name>>.jpg", 
+   ... 7 more links here
+   "http://<s3 ip address>>/<<image name>>.jpg",    
+   "http://<s3 ip address>>/concatenated.jpg"       
 ]
 ```
 
