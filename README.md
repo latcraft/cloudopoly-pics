@@ -7,5 +7,23 @@ Information about the first challenge can be found [here](https://github.com/lat
 
 Problem definition
 ==================
+Create a images processing service that
+- Performs image search on Flickr based on the following criteria ADADAXDADA
+- Adds [LatCraft logo](https://github.com/latcraft/latcraft.github.io/blob/master/images/logo.png) to the top-right image corner
+- Resizes images to 300x300
+- Concatenates 10 images by forming bigger 3000x3000 image
+- Stores concatenated images to your S3 instance and responds with the links
 
+# Requirements
 
+- Any programming language, any operating system
+- Deploy your service to *AWS* *EC2* (free tier)
+- Use smallest instance type (`t2.micro`)
+- Send IP address of your service before `31.02.2015 24:00` to contest@latcraft.lv
+- On `02.02.2015 20:00` we start the test! 
+ 
+# Winner election
+
+Web services, which return the expected result faster, will win.
+
+### Good luck!
