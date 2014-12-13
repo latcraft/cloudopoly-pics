@@ -24,10 +24,10 @@ Expected JSON response:
 
 ```
 [
-   "http://<s3 ip address>>/<<image name>>.jpg", 
-   "http://<s3 ip address>>/<<image name>>.jpg", 
+   "http://<s3 ip address>>/1uCqioJ.jpg", 
+   "http://<s3 ip address>>/1sqlimo.jpg", 
    ... 7 more links here
-   "http://<s3 ip address>>/<<image name>>.jpg",    
+   "http://<s3 ip address>>/1uADWb8.jpg",    
    "http://<s3 ip address>>/concatenated.jpg"       
 ]
 ```
