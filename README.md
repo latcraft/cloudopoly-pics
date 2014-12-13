@@ -9,7 +9,7 @@ Information about the first challenge can be found [here](https://github.com/lat
 
 Problem definition
 ==================
-Create an image generate service which:
+Create an image processing service which:
 - Accepts a set of bit.ly ids pointing to 10 images in JPG format with 2048 x 1365 resolution
 - Resolves URIs (`1uCqioJ` resolves to `http://bit.ly/1uCqioJ`) and uploads images to your S3 instance. Before uploading, [LatCraft logo](logo.png) should be added to the top-right corner of every image (feel free to convert logo to more convenient format if neccessary)
 - Concatenates 10 logo-marked images (in whatever order) by forming large 20480 x 13650 image
