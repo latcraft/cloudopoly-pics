@@ -8,11 +8,11 @@ Information about the first challenge can be found [here](https://github.com/lat
 Problem definition
 ==================
 Create an image processing service which:
-- Accepts a set of bit.ly identifiers that point to JPG images with 2048 x 1365 resolution
-- Resolves URIs (`1uCqioJ` resolves to `http://bit.ly/1uCqioJ`) and uploads images to your S3 instance. Before uploading, [LatCraft logo](logo.png) should be added to the top-right corner of every image (feel free to convert logo to more convenient format if neccessary)
-- Concatenates 10 logo-marked images (in whatever order) by forming large 20480 x 13650 image
-- Uploads concatenated image to your S3 instance
-- Responds with links to 11 uploaded images
+- Accepts a set of bit.ly identifiers that point to JPG images with 2048 x 1365 resolution.
+- Resolves URIs (`1uCqioJ` resolves to `http://bit.ly/1uCqioJ`) and uploads images to your S3 bucket. Before uploading, [LatCraft logo](logo.png) should be added to the top-right corner of every image (feel free to convert logo to more convenient format if neccessary).
+- Concatenates 10 logo-marked images (in whatever order) by forming large 20480 x 13650 image.
+- Uploads concatenated image to your S3 instance.
+- Responds with links to 11 uploaded images.
 
 Expected input: 
 
@@ -22,11 +22,11 @@ Expected JSON response:
 
 ```
 [
-   "http://<s3 ip address>>/1uCqioJ.jpg", 
-   "http://<s3 ip address>>/1sqlimo.jpg", 
+   "http://<s3 bucket address>>/1uCqioJ.jpg", 
+   "http://<s3 bucket address>>/1sqlimo.jpg", 
    ... 7 more links here
-   "http://<s3 ip address>>/1uADWb8.jpg",    
-   "http://<s3 ip address>>/concatenated.jpg"       
+   "http://<s3 bucket address>>/1uADWb8.jpg",    
+   "http://<s3 bucket address>>/concatenated.jpg"       
 ]
 ```
 
