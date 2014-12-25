@@ -10,7 +10,7 @@ Problem definition
 Create an image processing service which:
 - Accepts a set of bit.ly identifiers that point to JPG images with 2048 x 1365 resolution.
 - Resolves URIs (`1uCqioJ` resolves to `http://bit.ly/1uCqioJ`) and uploads images to your S3 bucket. Before uploading, [LatCraft logo](logo.png) should be added to the top-right corner of every image (feel free to convert logo to more convenient format if neccessary).
-- Concatenates 10 logo-marked images (in whatever order) by forming large 20480 x 13650 image.
+- Concatenates 10 logo-marked images (in any order) by forming large 2048 x 13650 image.
 - Uploads concatenated image to your S3 instance.
 - Responds with links to 11 uploaded images.
 
