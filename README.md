@@ -36,7 +36,7 @@ Expected JSON response:
 - Deploy your service to *AWS* *EC2* (free tier)
 - Use smallest instance type (`t2.micro`). Feel free to use 1+ `t2.micro` instances.
 - Send IP address of your service before `02.02.2015 18:00` to contest@latcraft.lv
-- On `02.02.2015 20:00` we start the test! 
+- On `02.02.2015 20:00` we start the test! Feel free to stop instance at 24:00.
  
 # Winner election
 
