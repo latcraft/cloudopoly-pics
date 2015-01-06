@@ -14,7 +14,7 @@ Create an image processing service which:
 - Uploads concatenated image to your S3 instance.
 - Responds with links to 11 uploaded images.
 
-Expected input: 
+Expected input (pointing to real images):
 
         http://<ip address>/process?images=1uCqioJ+1sqlimo+1uADAkJ+1BHryP2+13koVon+1uCqTGX+16jnrfk+1wsy1sC+1wN7idN+1uADWb8
 
